@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    font-family: Roboto;
+    font-weight: 700;
+}
+
+.ui-container {
+    z-index: 100;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.ui-element {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* positions */
+.ui-centered {
+    transform: translate(50%, 50%);
+    bottom: 50%;
+    right: 50%;
+}
+
+.ui-right { right: 0px; }
+.ui-bottom { bottom: 0px;}
+.ui-center { justify-content: center; }
+.ui-align { align-items: center; }
+.ui-content-right { justify-content: flex-end; }
+.ui-col { flex-direction: column; }
+
+/* spacing */
+.ui-padding {
+    padding: 20px 30px;
+}
+
+/* shapes */
+.ui-border-top {
+    border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+}
+.ui-border-bot {
+    border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+}
+.ui-border {
+    border-radius: var(--main-border-radius);
+}
+
+/* text */
+.ui-element>span {
+    font-size: 1em;
+    color: var(--main-ui-txt);
+}
+.ui-title {
+    font-weight: 700;
+}
+.ui-data {
+    font-weight: 400;
+}
+
+/* colors */
+.ui-shadow {
+    -webkit-box-shadow: 0 0 12px 0 rgba(0,0,0,0.59);
+    -moz-box-shadow: 0 0 12px 0 rgba(0,0,0,0.59);
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.59);
+}
+
+.ui-panel {
+    background-color: var(--main-ui-main-bg);
+}
+
+/* templates */
+.ui-main-win {
+    z-index: 100;
+    position: absolute;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ui-win-body {
+    flex: 1;
+    color: var(--main-ui-txt);
+    background-color: var(--main-ui-faded-bg);
+}
+
+/* PROGRESS BAR */
+.progress-cont {
+    width: 100%;
+    height: 20px;
+    background: #1e1e1e;
+    border-radius: var(--main-border-radius);
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+  
+.progress-planet {
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: var(--main-ui-progress-bg);
+}
+
+
+/* color variables */
+:root {
+    --main-border-radius: 5px;
+    --main-ui-main-bg: rgb(41, 41, 41);
+    --main-ui-progress-bg: rgb(69, 163, 69);
+    --main-ui-faded-bg: rgba(21, 21, 21, 0.775);
+    --main-ui-txt: #fff;
+}
+
+/* TEMPORARY */
+#ui-header {
+    width: 400px;
+}
+
+#ui-planet-win {
+    width: 800px;
+    /* height: 70%; */
+}
+/* TEMPORARY */
+
+@media screen and (max-width: 900px) {
+    #ui-header {
+        width: 100%;
+        border-radius: 0;
+    }
+    #ui-planet-win {
+        width: 100%;
+    }
+}
+  
